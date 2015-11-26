@@ -37,10 +37,10 @@ as_config * as_config_init(as_config * c)
 {
 	c->ip_map = 0;
 	c->ip_map_size = 0;
-	c->max_threads = 300;
+	c->max_threads = 100;
 	c->max_socket_idle_sec = 14;
-	c->conn_timeout_ms = 1000;
-	c->tender_interval = 1000;
+	c->conn_timeout_ms = 3000;
+	c->tender_interval = 3000;
 	c->thread_pool_size = 16;
 	c->hosts_size = 0;
 	memset(c->user, 0, sizeof(c->user));

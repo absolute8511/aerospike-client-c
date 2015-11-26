@@ -712,7 +712,7 @@ as_wait_till_stabilized(as_cluster* cluster, as_error* err)
 			return AEROSPIKE_OK;
 		}
 		count = nodes->size;
-		usleep(1);  // Sleep 1 microsecond before next cluster tend.
+		usleep(1000*10);  // Sleep 1 microsecond before next cluster tend.
 	} while (cf_getms() < limit);
 	
 	return AEROSPIKE_OK;
